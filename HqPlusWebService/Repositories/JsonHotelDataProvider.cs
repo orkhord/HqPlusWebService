@@ -9,7 +9,7 @@ namespace HqPlusWebService.Repositories
 {
     public class JsonHotelDataProvider
     {
-        public async Task<ICollection<HotelRatesInfo>> GetFromFile(string path)
+        public async virtual Task<ICollection<HotelRatesInfo>> GetFromFile(string path)
         {
             using FileStream fs = File.OpenRead(path);
             return await Get(fs);
